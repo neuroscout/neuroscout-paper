@@ -1,0 +1,27 @@
+format: jb-book
+root: intro
+#format: jb-book
+chapters:
+- file: overview
+- file: models
+  sections:
+  - file: Single_Predictor.ipynb
+  - file: Visualize_Predictors.ipynb
+  - file: Compare AFNI.ipynb
+- file: vision
+  sections:
+  - file: FaceNet.ipynb
+- file: audition
+  sections:
+  - file: AudioSet - RMS_Speech.ipynb
+  - file: AudioSet - Single.ipynb
+- file: language
+  sections:
+  - file: BertEntropy.ipynb
+  - file: BertSurprisal.ipynb
+  - file: Language Variables.ipynb
+  - file: Lexical Frequency - Incremental.ipynb
+  - file: Lexical Frequency Spoken - Incremental.ipynb
+  - file: Lexical Sensorimotor Norms.ipynb
+- file: data_access
+
