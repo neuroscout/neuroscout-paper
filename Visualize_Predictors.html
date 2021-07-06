@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualize Predictors &#8212; Neuroscout Introduction Paper</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Compare to AFNI" href="Compare%20AFNI.html" />
+    <link rel="prev" title="Single predictor models" href="Single_Predictor.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/neuroscout_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Neuroscout Introduction Paper</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Neuroscout
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="models.html">
+   Models within Neuroscout &amp; comparisons
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Single_Predictor.html">
+     Single predictor models
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Visualize Predictors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Compare%20AFNI.html">
+     Compare to AFNI
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="vision.html">
+   Vision
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="FaceNet.html">
+     FaceNet single-predictor models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="audition.html">
+   Audition
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="AudioSet%20-%20RMS_Speech.html">
+     AudioSet + RMS + as-Speech models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="AudioSet%20-%20Single.html">
+     AudioSet models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="language.html">
+   Language
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="BertEntropy.html">
+     Bert Entropy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="BertSurprisal.html">
+     Bert Surprisal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Language%20Variables.html">
+     Language variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lexical%20Frequency%20-%20Incremental.html">
+     Lexical Frequency Incremental
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lexical%20Frequency%20Spoken%20-%20Incremental.html">
+     Spoken Lexical Word Frequency
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lexical%20Sensorimotor%20Norms.html">
+     Lexical norms from Lancaster Sensorimotor Norms
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_access.html">
+   Data access
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Visualize_Predictors.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/neuroscout/neuroscout-paper"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/neuroscout/neuroscout-paper/issues/new?title=Issue%20on%20page%20%2FVisualize_Predictors.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/neuroscout/neuroscout-paper/master?urlpath=tree/paper/Visualize_Predictors.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="visualize-predictors">
+<h1>Visualize Predictors<a class="headerlink" href="#visualize-predictors" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>import pyns
+import pandas as pd
+from pathlib import Path
+from IPython.display import Image
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import ImageGrid
+import numpy as np
+from skimage.transform import resize
+%matplotlib inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">STIM_PATH</span> <span class="o">=</span> Path<span class="o">(</span><span class="s1">&#39;/media/neuroscout-data/neuroscout/file_data/stimuli/&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">dataset_tasks</span> <span class="o">=</span>  <span class="o">{</span><span class="s1">&#39;HealthyBrainNetwork-movieDM&#39;</span>: <span class="o">(</span><span class="m">8</span>, <span class="m">7</span><span class="o">)</span>,
+ <span class="s1">&#39;SchematicNarrative-perception&#39;</span>: <span class="o">(</span><span class="m">20</span>, <span class="m">40</span><span class="o">)</span>,
+ <span class="s1">&#39;studyforrest-movie&#39;</span>: <span class="o">(</span><span class="m">11</span>, <span class="m">16</span><span class="o">)</span>,
+ <span class="s1">&#39;Raiders-raiders&#39;</span>: <span class="o">(</span><span class="m">10</span>, <span class="m">9</span><span class="o">)</span>,
+ <span class="s1">&#39;Life-life&#39;</span>: <span class="o">(</span><span class="m">9</span>, <span class="m">8</span><span class="o">)</span>,
+ <span class="s1">&#39;ParanoiaStory-story&#39;</span>: <span class="o">(</span><span class="m">18</span>, <span class="m">38</span><span class="o">)</span>,
+ <span class="s1">&#39;Sherlock-sherlockPart1&#39;</span>: <span class="o">(</span><span class="m">21</span>, <span class="m">41</span><span class="o">)</span>,
+ <span class="s1">&#39;SherlockMerlin-MerlinMovie&#39;</span>: <span class="o">(</span><span class="m">5</span>, <span class="m">4</span><span class="o">)</span>,
+ <span class="s1">&#39;LearningTemporalStructure-movie&#39;</span>: <span class="o">(</span><span class="m">19</span>, <span class="m">39</span><span class="o">)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>def get_stimuli_values<span class="o">(</span>predictor_name, dataset_id, <span class="nv">task_id</span><span class="o">=</span>None<span class="o">)</span>:
+    <span class="nv">runs</span> <span class="o">=</span> <span class="o">[</span>r<span class="o">[</span><span class="s1">&#39;id&#39;</span><span class="o">]</span> <span class="k">for</span> r <span class="k">in</span> api.runs.get<span class="o">(</span><span class="nv">dataset_id</span><span class="o">=</span>dataset_id, <span class="nv">task_id</span><span class="o">=</span>task_id<span class="o">)]</span>
+    <span class="nv">preds</span> <span class="o">=</span> api.predictors.get<span class="o">(</span><span class="nv">name</span><span class="o">=</span>predictor_name, <span class="nv">run_id</span><span class="o">=</span>runs<span class="o">)</span>
+    <span class="k">if</span> preds:
+        <span class="nv">predictor_id</span> <span class="o">=</span> preds<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="s1">&#39;id&#39;</span><span class="o">]</span>
+    <span class="k">else</span>:
+        <span class="k">return</span> None
+
+    <span class="nv">pes</span> <span class="o">=</span> pd.DataFrame<span class="o">(</span>api.predictor_events.get<span class="o">(</span><span class="nv">predictor_id</span><span class="o">=</span>predictor_id, <span class="nv">stimulus_timing</span><span class="o">=</span>True<span class="o">))</span>
+    <span class="nv">stimuli_by_value</span> <span class="o">=</span> pes.groupby<span class="o">(</span><span class="s1">&#39;stimulus_path&#39;</span><span class="o">)</span>.max<span class="o">()</span>.reset_index<span class="o">()</span>
+    
+    <span class="k">return</span> stimuli_by_value
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>def _load_impath<span class="o">(</span>rel_path, <span class="nv">dims</span><span class="o">=</span>None<span class="o">)</span>:
+    <span class="nv">img</span> <span class="o">=</span> mpimg.imread<span class="o">(</span>str<span class="o">(</span>STIM_PATH / rel_path<span class="o">))</span>
+    
+    <span class="k">if</span> resize:
+        <span class="nv">img</span> <span class="o">=</span> resize<span class="o">(</span>img, dims<span class="o">)</span>
+        
+    <span class="k">return</span> img
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>def bin_sv_min_max<span class="o">(</span>sv, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>:
+    sv<span class="o">[</span><span class="s1">&#39;time_group&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span>sv.onset / bin_length<span class="o">)</span>.round<span class="o">()</span>
+    <span class="nv">sv_binned_max</span> <span class="o">=</span> sv.groupby<span class="o">(</span><span class="s1">&#39;time_group&#39;</span><span class="o">)</span>.apply<span class="o">(</span>lambda x: x<span class="o">[</span>x.value <span class="o">==</span> x.value.max<span class="o">()])</span>.sort_values<span class="o">(</span><span class="s1">&#39;value&#39;</span><span class="o">)</span>
+    <span class="nv">sv_binned_min</span> <span class="o">=</span> sv.groupby<span class="o">(</span><span class="s1">&#39;time_group&#39;</span><span class="o">)</span>.apply<span class="o">(</span>lambda x: x<span class="o">[</span>x.value <span class="o">==</span> x.value.min<span class="o">()])</span>.sort_values<span class="o">(</span><span class="s1">&#39;value&#39;</span><span class="o">)</span>
+    
+    <span class="k">return</span> sv_binned_min, sv_binned_max
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">sv</span> <span class="o">=</span> get_stimuli_values<span class="o">(</span><span class="s1">&#39;hand&#39;</span>, <span class="m">20</span>, <span class="m">40</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sv_min, <span class="nv">sv_max</span> <span class="o">=</span> bin_sv_min_max<span class="o">(</span>sv, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sv_max
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>stimulus_path</th>
+      <th>duration</th>
+      <th>onset</th>
+      <th>predictor_id</th>
+      <th>run_id</th>
+      <th>stimulus_duration</th>
+      <th>stimulus_id</th>
+      <th>stimulus_onset</th>
+      <th>value</th>
+      <th>time_group</th>
+    </tr>
+    <tr>
+      <th>time_group</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>12.0</th>
+      <th>673</th>
+      <td>6f13bbf219d101426fa97d2a6c0457b41ef6159d.png</td>
+      <td>1.0</td>
+      <td>731.14</td>
+      <td>19398</td>
+      <td>1379</td>
+      <td>1.0</td>
+      <td>38319</td>
+      <td>731.14</td>
+      <td>0.0577239990234375</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>13.0</th>
+      <th>439</th>
+      <td>4af1b4a47a6530b648a84e380a592a9cea766c29.png</td>
+      <td>1.0</td>
+      <td>765.84</td>
+      <td>19398</td>
+      <td>1376</td>
+      <td>1.0</td>
+      <td>38527</td>
+      <td>765.84</td>
+      <td>0.07395718991756439</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>6.0</th>
+      <th>1074</th>
+      <td>b56c6bf34a256bed7848465b151d117ee2ea7e53.png</td>
+      <td>1.0</td>
+      <td>374.19</td>
+      <td>19398</td>
+      <td>1379</td>
+      <td>1.0</td>
+      <td>38131</td>
+      <td>374.19</td>
+      <td>0.1837969869375229</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>10.0</th>
+      <th>17</th>
+      <td>03a143ed0a99c77bd1934af8144afc8ea5e7be8f.png</td>
+      <td>1.0</td>
+      <td>571.05</td>
+      <td>19398</td>
+      <td>1376</td>
+      <td>1.0</td>
+      <td>38517</td>
+      <td>571.05</td>
+      <td>0.24429114162921906</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>3.0</th>
+      <th>1180</th>
+      <td>c56814eeac73bb724feab7f5f6fd5564c05fc965.png</td>
+      <td>1.0</td>
+      <td>163.00</td>
+      <td>19398</td>
+      <td>1379</td>
+      <td>1.0</td>
+      <td>38086</td>
+      <td>163.00</td>
+      <td>0.6218664646148682</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>8.0</th>
+      <th>1153</th>
+      <td>c1b8f309db0d250030f4ecfb75a5a5af258ee2fa.png</td>
+      <td>1.0</td>
+      <td>476.01</td>
+      <td>19398</td>
+      <td>1378</td>
+      <td>1.0</td>
+      <td>37660</td>
+      <td>476.01</td>
+      <td>0.7140951752662659</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>1.0</th>
+      <th>415</th>
+      <td>46e57348cc9a1ae34cff83a747de1d6ab2d2ac1b.png</td>
+      <td>1.0</td>
+      <td>81.00</td>
+      <td>19398</td>
+      <td>1377</td>
+      <td>1.0</td>
+      <td>37048</td>
+      <td>81.00</td>
+      <td>0.763525128364563</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>9.0</th>
+      <th>189</th>
+      <td>22041eda9ff2dc15861c4665246845f99ee90029.png</td>
+      <td>1.0</td>
+      <td>532.05</td>
+      <td>19398</td>
+      <td>1376</td>
+      <td>1.0</td>
+      <td>38478</td>
+      <td>532.05</td>
+      <td>0.7704832553863525</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>0.0</th>
+      <th>1113</th>
+      <td>b9efaf792ed563d492cf3bebcb36d5fbbac78a4a.png</td>
+      <td>1.0</td>
+      <td>13.00</td>
+      <td>19398</td>
+      <td>1377</td>
+      <td>1.0</td>
+      <td>36980</td>
+      <td>13.00</td>
+      <td>0.7718183398246765</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2.0</th>
+      <th>502</th>
+      <td>54b5760bc14746bca0602f0502b5dfb268ae5d79.png</td>
+      <td>1.0</td>
+      <td>102.00</td>
+      <td>19398</td>
+      <td>1379</td>
+      <td>1.0</td>
+      <td>38025</td>
+      <td>102.00</td>
+      <td>0.8015182018280029</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>7.0</th>
+      <th>115</th>
+      <td>146af659e99e58ce4a83b8a452f9490e88c96268.png</td>
+      <td>1.0</td>
+      <td>407.05</td>
+      <td>19398</td>
+      <td>1376</td>
+      <td>1.0</td>
+      <td>38353</td>
+      <td>407.05</td>
+      <td>0.9782671928405762</td>
+      <td>7.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="o">=</span><span class="m">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">top_ps</span> <span class="o">=</span> list<span class="o">(</span>reversed<span class="o">(</span>sv_max.iloc<span class="o">[(</span>-1-<span class="o">(</span>n-1<span class="o">))</span>:<span class="o">][</span><span class="s1">&#39;stimulus_path&#39;</span><span class="o">]</span>.tolist<span class="o">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>top_ps
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;146af659e99e58ce4a83b8a452f9490e88c96268.png&#39;,
+ &#39;54b5760bc14746bca0602f0502b5dfb268ae5d79.png&#39;,
+ &#39;b9efaf792ed563d492cf3bebcb36d5fbbac78a4a.png&#39;,
+ &#39;22041eda9ff2dc15861c4665246845f99ee90029.png&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Image<span class="o">(</span>str<span class="o">(</span>STIM_PATH / <span class="s1">&#39;b9efaf792ed563d492cf3bebcb36d5fbbac78a4a.png&#39;</span><span class="o">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Visualize_Predictors_13_0.png" src="_images/Visualize_Predictors_13_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>def plot_top_bottom_all<span class="o">(</span>predictor_name, <span class="nv">n</span><span class="o">=</span><span class="m">4</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span>, <span class="nv">figsize</span><span class="o">=(</span><span class="m">40</span>., <span class="m">70</span>.<span class="o">)</span>, <span class="nv">resize</span><span class="o">=(</span><span class="m">480</span>, <span class="m">720</span><span class="o">))</span>:
+    <span class="nv">n_datasets</span> <span class="o">=</span> <span class="m">0</span>
+    <span class="nv">loaded</span> <span class="o">=</span> <span class="o">[]</span>
+    
+    <span class="k">for</span> dataset_id, task_id <span class="k">in</span> dataset_tasks.values<span class="o">()</span>:
+        <span class="nv">sv</span> <span class="o">=</span> get_stimuli_values<span class="o">(</span>predictor_name, dataset_id, task_id<span class="o">)</span>
+        <span class="k">if</span> sv is None:
+            <span class="k">continue</span>
+        <span class="nv">n_datasets</span> <span class="o">+=</span> <span class="m">1</span>
+        sv_min, <span class="nv">sv_max</span> <span class="o">=</span> bin_sv_min_max<span class="o">(</span>sv, <span class="nv">bin_length</span><span class="o">=</span>bin_length<span class="o">)</span>
+        <span class="nv">top_ps</span> <span class="o">=</span> sv_max.iloc<span class="o">[(</span>-1-<span class="o">(</span>n-1<span class="o">))</span>:<span class="o">][</span><span class="s1">&#39;stimulus_path&#39;</span><span class="o">]</span>.tolist<span class="o">()</span>
+        <span class="nv">bottom_ps</span> <span class="o">=</span> sv_min.iloc<span class="o">[</span><span class="m">0</span>:n<span class="o">][</span><span class="s1">&#39;stimulus_path&#39;</span><span class="o">]</span>.tolist<span class="o">()</span>
+
+
+        <span class="nv">loaded</span> <span class="o">+=</span> <span class="o">[</span>_load_impath<span class="o">(</span>p, <span class="nv">dims</span><span class="o">=</span>resize<span class="o">)</span> <span class="k">for</span> p <span class="k">in</span> bottom_ps + top_ps<span class="o">]</span>
+
+    <span class="nv">fig</span> <span class="o">=</span> plt.figure<span class="o">(</span><span class="nv">figsize</span><span class="o">=</span>figsize<span class="o">)</span>
+    <span class="nv">grid</span> <span class="o">=</span> ImageGrid<span class="o">(</span>fig, <span class="m">111</span>,  <span class="c1"># similar to subplot(111)</span>
+                     <span class="nv">nrows_ncols</span><span class="o">=(</span>n_datasets, n*2<span class="o">)</span>,  <span class="c1"># creates 2x2 grid of axes</span>
+                     <span class="nv">axes_pad</span><span class="o">=</span><span class="m">0</span>.1,  <span class="c1"># pad between axes in inch.</span>
+                     <span class="o">)</span>
+
+    <span class="k">for</span> ax, im <span class="k">in</span> zip<span class="o">(</span>grid, loaded<span class="o">)</span>:
+        <span class="c1"># Iterating over the grid returns the Axes.</span>
+        ax.imshow<span class="o">(</span>im<span class="o">)</span>
+        ax.axes.xaxis.set_visible<span class="o">(</span>False<span class="o">)</span>
+        ax.axes.yaxis.set_visible<span class="o">(</span>False<span class="o">)</span>
+        
+    <span class="c1"># Turn off tick marks</span>
+    plt.axis<span class="o">(</span><span class="s1">&#39;off&#39;</span><span class="o">)</span>
+    plt.show<span class="o">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">plt</span> <span class="o">=</span> plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;building&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/alejandro/anaconda3/lib/python3.7/site-packages/skimage/transform/_warps.py:105: UserWarning: The default mode, &#39;constant&#39;, will be changed to &#39;reflect&#39; in skimage 0.15.
+  warn(&quot;The default mode, &#39;constant&#39;, will be changed to &#39;reflect&#39; in &quot;
+/home/alejandro/anaconda3/lib/python3.7/site-packages/skimage/transform/_warps.py:110: UserWarning: Anti-aliasing will be enabled by default in skimage 0.15 to avoid aliasing artifacts when down-sampling images.
+  warn(&quot;Anti-aliasing will be enabled by default in skimage 0.15 to &quot;
+</pre></div>
+</div>
+<img alt="_images/Visualize_Predictors_15_1.png" src="_images/Visualize_Predictors_15_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;hand&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/alejandro/anaconda3/lib/python3.7/site-packages/skimage/transform/_warps.py:105: UserWarning: The default mode, &#39;constant&#39;, will be changed to &#39;reflect&#39; in skimage 0.15.
+  warn(&quot;The default mode, &#39;constant&#39;, will be changed to &#39;reflect&#39; in &quot;
+/home/alejandro/anaconda3/lib/python3.7/site-packages/skimage/transform/_warps.py:110: UserWarning: Anti-aliasing will be enabled by default in skimage 0.15 to avoid aliasing artifacts when down-sampling images.
+  warn(&quot;Anti-aliasing will be enabled by default in skimage 0.15 to &quot;
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-394-fe69155a84be&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plot_top_bottom_all</span><span class="p">(</span><span class="s1">&#39;hand&#39;</span><span class="p">,</span> <span class="n">bin_length</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-392-083e663572fa&gt;</span> in <span class="ni">plot_top_bottom_all</span><span class="nt">(predictor_name, n, bin_length, figsize, resize)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="n">loaded</span> <span class="o">+=</span> <span class="p">[</span><span class="n">_load_impath</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="n">resize</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">bottom_ps</span> <span class="o">+</span> <span class="n">top_ps</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> 
+<span class="ne">---&gt; </span><span class="mi">17</span>     <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">grid</span> <span class="o">=</span> <span class="n">ImageGrid</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span>  <span class="c1"># similar to subplot(111)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>                      <span class="n">nrows_ncols</span><span class="o">=</span><span class="p">(</span><span class="n">n_datasets</span><span class="p">,</span> <span class="n">n</span><span class="o">*</span><span class="mi">2</span><span class="p">),</span>  <span class="c1"># creates 2x2 grid of axes</span>
+
+<span class="ne">AttributeError</span>: &#39;NoneType&#39; object has no attribute &#39;figure&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;text&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;brightness&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;action&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;landscape&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;indoors&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;city&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;animal&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;music&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;vehicle&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;water&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;wood&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>plot_top_bottom_all<span class="o">(</span><span class="s1">&#39;tool&#39;</span>, <span class="nv">bin_length</span><span class="o">=</span><span class="m">60</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "bash"
+        },
+        kernelOptions: {
+            kernelName: "bash",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'bash'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Single_Predictor.html" title="previous page">Single predictor models</a>
+    <a class='right-next' id="next-link" href="Compare%20AFNI.html" title="next page">Compare to AFNI</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Neuroscout team<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

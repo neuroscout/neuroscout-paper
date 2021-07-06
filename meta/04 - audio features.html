@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AudioSet categories &#8212; Neuroscout Introduction Paper</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/neuroscout_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Neuroscout Introduction Paper</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Neuroscout
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../models.html">
+   Models within Neuroscout &amp; comparisons
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Single_Predictor.html">
+     Single predictor models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Visualize_Predictors.html">
+     Visualize Predictors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Compare%20AFNI.html">
+     Compare to AFNI
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../vision.html">
+   Vision
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../FaceNet.html">
+     FaceNet single-predictor models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../audition.html">
+   Audition
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../AudioSet%20-%20RMS_Speech.html">
+     AudioSet + RMS + as-Speech models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../AudioSet%20-%20Single.html">
+     AudioSet models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../language.html">
+   Language
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../BertEntropy.html">
+     Bert Entropy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../BertSurprisal.html">
+     Bert Surprisal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Language%20Variables.html">
+     Language variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Lexical%20Frequency%20-%20Incremental.html">
+     Lexical Frequency Incremental
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Lexical%20Frequency%20Spoken%20-%20Incremental.html">
+     Spoken Lexical Word Frequency
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Lexical%20Sensorimotor%20Norms.html">
+     Lexical norms from Lancaster Sensorimotor Norms
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_access.html">
+   Data access
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/meta/04 - audio features.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/neuroscout/neuroscout-paper"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/neuroscout/neuroscout-paper/issues/new?title=Issue%20on%20page%20%2Fmeta/04 - audio features.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/neuroscout/neuroscout-paper/master?urlpath=tree/paper/meta/04 - audio features.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   AudioSet categories
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#audioset-simultaneous-labels">
+   AudioSet: simultaneous labels
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">meta_stuff</span> <span class="kn">import</span> <span class="n">process_set</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR:duecredit:Failed to import duecredit due to No module named &#39;duecredit&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="audioset-categories">
+<h1>AudioSet categories<a class="headerlink" href="#audioset-categories" title="Permalink to this headline">¶</a></h1>
+<p>Meta-analyses of labels from the AudioSet ontology. Each model contains a single AudioSet category of interest, RMS (to control for overall differences in audio levels), and standard nuisance covariates.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;as-Animal&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;Ma4l3&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;wjNK3&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;9L2Vr&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;97p4d&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;wkVoJ&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;M4jL5&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;A25a3&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;MNQOL&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;M557X&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;9eyYz&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;AZ48K&quot;</span><span class="p">}},</span> <span class="s2">&quot;as-Music&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;AZ4ka&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;Mv3W5&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;Mm3zq&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;MpDV3&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;wy2qZ&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;MRaWG&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;wgyDz&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;MPqba&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;A6okX&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;wl8rz&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;Mv3l0&quot;</span><span class="p">}},</span> <span class="s2">&quot;as-Whistling&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;AxBGa&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;wJ3dW&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;M37jj&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;AYy7J&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;9BqBl&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;MD1Q7&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;wQDnR&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;w0gGB&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;wK286&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;Aop8D&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;Mm35Y&quot;</span><span class="p">}},</span> <span class="s2">&quot;as-Vehicle&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;A6oYv&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;wl8Wy&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;AxB5B&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;wJ3qG&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;M37xv&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;AYyJz&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;9Bq1v&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;MD1XN&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;wQD2q&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;w0gZ1&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;MpDvm&quot;</span><span class="p">}},</span> <span class="s2">&quot;as-Silence&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;wK2ax&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;AopqK&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;ArqLE&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;MzQZP&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;AdRdD&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;M8vDg&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;AVjPB&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;A136Q&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;wOOka&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;MXjxG&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;wy238&quot;</span><span class="p">}},</span> <span class="s2">&quot;as-Tools&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;Abqrv&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;MnkGa&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;wWylp&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;9Edbm&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;MGvWk&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;AqQj5&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;Ma4oz&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;wjNbq&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;9L2jQ&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;97pBN&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;MRaD4&quot;</span><span class="p">}},</span> <span class="s2">&quot;as-Noise&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;wkVn1&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;M4jJ7&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;A25l8&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;MNQ7V&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;M553j&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;9ey8d&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;AZ43k&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;Mv322&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;Mm3EB&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;MpDa5&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;wgyLJ&quot;</span><span class="p">}},</span> <span class="s2">&quot;as-Water&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;wy2ep&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;MRaNy&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;wgy1L&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;MPqP4&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;A6ojv&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;wl8Yy&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;AxB1B&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;wJ30G&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;M37Gv&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;AYyGz&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;MPqYy&quot;</span><span class="p">}},</span> <span class="s2">&quot;as-Wind&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;9Bqlv&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;MD1JN&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;wQDVq&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;w0gn1&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;wK2Kx&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;AopQK&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;ArqoE&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;MzQXP&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;AdReD&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;M8v7g&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;A6onO&quot;</span><span class="p">}},</span> <span class="s2">&quot;as-Hands&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;AVjnB&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;A13WQ&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;wOOda&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;MXjEG&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;AbqNv&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;MnkDa&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;wWyWp&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;9Ed3m&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;MGvBk&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;AqQK5&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;wl8N5&quot;</span><span class="p">}},</span> <span class="s2">&quot;as-Wood&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;HealthyBrainNetwork&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movieDM&quot;</span><span class="p">:</span> <span class="s2">&quot;Ma42z&quot;</span><span class="p">},</span> <span class="s2">&quot;SchematicNarrative&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;perception&quot;</span><span class="p">:</span> <span class="s2">&quot;wjNJq&quot;</span><span class="p">},</span> <span class="s2">&quot;studyforrest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;9L2oQ&quot;</span><span class="p">},</span> <span class="s2">&quot;Raiders&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;raiders&quot;</span><span class="p">:</span> <span class="s2">&quot;97pLN&quot;</span><span class="p">},</span> <span class="s2">&quot;Life&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;life&quot;</span><span class="p">:</span> <span class="s2">&quot;wkV31&quot;</span><span class="p">},</span> <span class="s2">&quot;ParanoiaStory&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;story&quot;</span><span class="p">:</span> <span class="s2">&quot;M4jq7&quot;</span><span class="p">},</span> <span class="s2">&quot;Sherlock&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sherlockPart1&quot;</span><span class="p">:</span> <span class="s2">&quot;A25E8&quot;</span><span class="p">},</span> <span class="s2">&quot;SherlockMerlin&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;MerlinMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;MNQzV&quot;</span><span class="p">,</span> <span class="s2">&quot;SherlockMovie&quot;</span><span class="p">:</span> <span class="s2">&quot;M55aj&quot;</span><span class="p">},</span> <span class="s2">&quot;LearningTemporalStructure&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;9eyZd&quot;</span><span class="p">},</span> <span class="s2">&quot;Budapest&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;movie&quot;</span><span class="p">:</span> <span class="s2">&quot;AxBJK&quot;</span><span class="p">}}}</span>
+<span class="n">process_set</span><span class="p">(</span><span class="s1">&#39;audioset&#39;</span><span class="p">,</span> <span class="n">json_data</span><span class="o">=</span><span class="n">json_data</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;SherlockMovie&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading maps for effect &#39;as-Animal&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Animal
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Animal/&quot;
+Downloading maps for effect &#39;as-Music&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Music
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Music/&quot;
+Downloading maps for effect &#39;as-Whistling&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Whistling
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Whistling/&quot;
+Downloading maps for effect &#39;as-Vehicle&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Vehicle
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Vehicle/&quot;
+Downloading maps for effect &#39;as-Silence&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Silence
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Silence/&quot;
+Downloading maps for effect &#39;as-Tools&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Tools
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Tools/&quot;
+Downloading maps for effect &#39;as-Noise&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Noise
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Noise/&quot;
+Downloading maps for effect &#39;as-Water&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Water
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Water/&quot;
+Downloading maps for effect &#39;as-Wind&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Wind
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Wind/&quot;
+Downloading maps for effect &#39;as-Hands&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Hands
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Hands/&quot;
+Downloading maps for effect &#39;as-Wood&#39;...
+
+Dataset created in /home/jdkent/projects/neuroscout-paper/meta/images/as-Wood
+
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Wood/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Animal/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Music/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Whistling/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Vehicle/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Silence/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Tools/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Noise/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Water/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Wind/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Hands/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Wood/&quot;
+meta-analyzing 10 studies for effect: as-Animal
+meta-analyzing 10 studies for effect: as-Hands
+meta-analyzing 10 studies for effect: as-Music
+meta-analyzing 10 studies for effect: as-Noise
+meta-analyzing 10 studies for effect: as-Silence
+meta-analyzing 10 studies for effect: as-Tools
+meta-analyzing 10 studies for effect: as-Vehicle
+meta-analyzing 10 studies for effect: as-Water
+meta-analyzing 10 studies for effect: as-Whistling
+meta-analyzing 10 studies for effect: as-Wind
+meta-analyzing 10 studies for effect: as-Wood
+</pre></div>
+</div>
+<img alt="../_images/04 - audio features_2_1.svg" src="../_images/04 - audio features_2_1.svg" /></div>
+</div>
+</div>
+<div class="section" id="audioset-simultaneous-labels">
+<h1>AudioSet: simultaneous labels<a class="headerlink" href="#audioset-simultaneous-labels" title="Permalink to this headline">¶</a></h1>
+<p>Meta-analysis of models that include <em>all</em> AudioSet labels (i.e., in the same model). This is out of date (no Budapest dataset) and not terribly interesting—the main takeaway is that the weird “whistling” and “wood” results observed above persist (presumably due to unaccounted-for visual or other confounding).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;9EdG8&quot;</span><span class="p">,</span> <span class="s2">&quot;MGvN3&quot;</span><span class="p">,</span> <span class="s2">&quot;AqQnO&quot;</span><span class="p">,</span> <span class="s2">&quot;Ma41J&quot;</span><span class="p">,</span> <span class="s2">&quot;wjNQX&quot;</span><span class="p">,</span> <span class="s2">&quot;97pkB&quot;</span><span class="p">,</span> <span class="s2">&quot;wkV43&quot;</span><span class="p">,</span> <span class="s2">&quot;M4j8z&quot;</span><span class="p">,</span> <span class="s2">&quot;A25gR&quot;</span><span class="p">]</span>
+
+<span class="n">effects</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="s1">&#39;as-Animal&#39;</span><span class="p">,</span> <span class="s1">&#39;as-Noise&#39;</span><span class="p">,</span> <span class="s1">&#39;as-Silence&#39;</span><span class="p">,</span> <span class="s1">&#39;as-Hands&#39;</span><span class="p">,</span> <span class="s1">&#39;as-Vehicle&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;as-Whistling&#39;</span><span class="p">,</span><span class="s1">&#39;as-Water&#39;</span><span class="p">,</span> <span class="s1">&#39;as-Wood&#39;</span><span class="p">,</span> <span class="s1">&#39;as-Music&#39;</span><span class="p">,</span> <span class="s1">&#39;as-Tools&#39;</span><span class="p">,</span> <span class="s1">&#39;as-Wind&#39;</span><span class="p">])</span>
+
+<span class="n">effects</span> <span class="o">=</span> <span class="p">{</span><span class="n">e</span><span class="p">:</span> <span class="n">ids</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">effects</span><span class="p">}</span>
+
+<span class="n">process_set</span><span class="p">(</span><span class="s1">&#39;audioset-all&#39;</span><span class="p">,</span> <span class="n">effects</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sherlockPart1&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading maps for effect &#39;as-Animal&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Animal/&quot;
+Downloading maps for effect &#39;as-Hands&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Hands/&quot;
+Downloading maps for effect &#39;as-Music&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Music/&quot;
+Downloading maps for effect &#39;as-Noise&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Noise/&quot;
+Downloading maps for effect &#39;as-Silence&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Silence/&quot;
+Downloading maps for effect &#39;as-Tools&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Tools/&quot;
+Downloading maps for effect &#39;as-Vehicle&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Vehicle/&quot;
+Downloading maps for effect &#39;as-Water&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Water/&quot;
+Downloading maps for effect &#39;as-Whistling&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Whistling/&quot;
+Downloading maps for effect &#39;as-Wind&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Wind/&quot;
+Downloading maps for effect &#39;as-Wood&#39;...
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Wood/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Animal/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Hands/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Music/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Noise/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Silence/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Tools/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Vehicle/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Water/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Whistling/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Wind/&quot;
+INFO:nimare.utils:Shared path detected: &quot;/home/jdkent/projects/neuroscout-paper/meta/images/as-Wood/&quot;
+meta-analyzing 8 studies for effect: as-Animal
+meta-analyzing 8 studies for effect: as-Hands
+meta-analyzing 8 studies for effect: as-Music
+meta-analyzing 8 studies for effect: as-Noise
+meta-analyzing 8 studies for effect: as-Silence
+meta-analyzing 8 studies for effect: as-Tools
+meta-analyzing 8 studies for effect: as-Vehicle
+meta-analyzing 8 studies for effect: as-Water
+meta-analyzing 8 studies for effect: as-Whistling
+meta-analyzing 8 studies for effect: as-Wind
+meta-analyzing 8 studies for effect: as-Wood
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;nibabel.nifti1.Nifti1Image at 0x7fd040fc6400&gt;,
+ &lt;nibabel.nifti1.Nifti1Image at 0x7fd040fc6820&gt;,
+ &lt;nibabel.nifti1.Nifti1Image at 0x7fd040fc6f70&gt;,
+ &lt;nibabel.nifti1.Nifti1Image at 0x7fd040fc6190&gt;,
+ &lt;nibabel.nifti1.Nifti1Image at 0x7fd040fc6850&gt;,
+ &lt;nibabel.nifti1.Nifti1Image at 0x7fd040fc6af0&gt;,
+ &lt;nibabel.nifti1.Nifti1Image at 0x7fd040fc6a00&gt;,
+ &lt;nibabel.nifti1.Nifti1Image at 0x7fd040fc6b80&gt;,
+ &lt;nibabel.nifti1.Nifti1Image at 0x7fd040fc6520&gt;,
+ &lt;nibabel.nifti1.Nifti1Image at 0x7fd040fc6430&gt;,
+ &lt;nibabel.nifti1.Nifti1Image at 0x7fd03f8dc820&gt;]
+</pre></div>
+</div>
+<img alt="../_images/04 - audio features_4_2.svg" src="../_images/04 - audio features_4_2.svg" /></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./meta"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Neuroscout team<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
