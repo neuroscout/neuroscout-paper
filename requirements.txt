@@ -2,3 +2,8 @@ ghp-import
 jupyter-book
 jupytext
 myst-nb
+pyns==0.4.8
+nilearn==0.8.0
+seaborn
+altair
+nimare
