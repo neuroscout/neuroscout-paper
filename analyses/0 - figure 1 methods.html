@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figure 1: feature extraction methods &#8212; Neuroscout: a unified platform for generalizable and reproducible fMRI research</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Single predictor models" href="1%20-%20single%20predictor%20models.html" />
+    <link rel="prev" title="Single predictor models" href="../single_predictor.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/neuroscout_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Neuroscout: a unified platform for generalizable and reproducible fMRI research</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../single_predictor.html">
+   Single predictor models
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Figure 1: feature extraction methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1%20-%20single%20predictor%20models.html">
+     Single predictor models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2%20-%20face%20features.html">
+     FaceNet models
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3%20-%20language%20features.ipynb.html">
+     3 - Language Models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../meta-analyses.html">
+   Meta-analyses
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../meta/1%20-%20single%20predictor%20models%20meta.html">
+     Single-predictor models for key features
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../meta/2%20-%20face%20features%20meta.html">
+     Face-related features
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../meta/3%20-%20language%20features%20meta.html">
+     Incremental lexical effects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../meta/supplemental%20ROI%20variability.html">
+     1) Building
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/analyses/0 - figure 1 methods.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/neuroscout/neuroscout-paper"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/neuroscout/neuroscout-paper/issues/new?title=Issue%20on%20page%20%2Fanalyses/0 - figure 1 methods.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/neuroscout/neuroscout-paper/jupyter_book?urlpath=tree/paper/analyses/0 - figure 1 methods.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-identify-an-example-run-associated-with-the-sherlockmerlin-dataset-and-merlinmovie-task">
+   1) First, identify an example  run associated with the “SherlockMerlin” dataset and “MerlinMovie” task
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-predictors-of-interest-extract-timeseries">
+   2) For predictors of interest, extract timeseries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-timecourse-in-two-sample-windows">
+   3) Plot timecourse in two sample windows
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Figure 1: feature extraction methods</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-identify-an-example-run-associated-with-the-sherlockmerlin-dataset-and-merlinmovie-task">
+   1) First, identify an example  run associated with the “SherlockMerlin” dataset and “MerlinMovie” task
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-predictors-of-interest-extract-timeseries">
+   2) For predictors of interest, extract timeseries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-timecourse-in-two-sample-windows">
+   3) Plot timecourse in two sample windows
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="figure-1-feature-extraction-methods">
+<h1>Figure 1: feature extraction methods<a class="headerlink" href="#figure-1-feature-extraction-methods" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">pyns</span> <span class="kn">import</span> <span class="n">Neuroscout</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">Neuroscout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Figure 1, we plot the timeseries of three example <code class="docutils literal notranslate"><span class="pre">Predictors</span></code>: <code class="docutils literal notranslate"><span class="pre">any_faces</span></code> (binary indicator of face presence), <code class="docutils literal notranslate"><span class="pre">building</span></code> (probability of building in frame), <code class="docutils literal notranslate"><span class="pre">subtlexusfrequency_Lg10WF</span></code> (frequency norm for each word in the speech transcript).</p>
+<div class="section" id="first-identify-an-example-run-associated-with-the-sherlockmerlin-dataset-and-merlinmovie-task">
+<h2>1) First, identify an example  run associated with the “SherlockMerlin” dataset and “MerlinMovie” task<a class="headerlink" href="#first-identify-an-example-run-associated-with-the-sherlockmerlin-dataset-and-merlinmovie-task" title="Permalink to this headline">¶</a></h2>
+<p>First, let’s take a look at the available datasets in Neuroscout</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datasets</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dataset count = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get</span><span class="p">())</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datasets and IDs:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dataset count = 12
+
+Datasets and IDs:
+
+studyforrest 11
+Raiders 10
+SchematicNarrative 20
+SherlockMerlin 5
+Sherlock 21
+narratives 30
+Life 9
+ParanoiaStory 18
+LearningTemporalStructure 19
+Budapest 27
+NaturalisticNeuroimagingDatabase 28
+ReadingBrainProject 29
+</pre></div>
+</div>
+</div>
+</div>
+<p>For this Figure, we are going to focus on the “SherlockMerlin” dataset, task “MerlinMovie”.</p>
+<p>Although all the subjects saw the same movie in this task, we need to ask for the timeline of a specific subject / run in Neuroscout (as it is designed to allow for different stimuli per run/subject).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># See tasks for SherlockMerlin dataset. Notice &quot;MerlinMovie&quot; has task &quot;id&quot;: 4</span>
+<span class="n">api</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">5</span><span class="p">)[</span><span class="s1">&#39;tasks&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;TR&#39;: 1.5,
+  &#39;avg_run_duration&#39;: 1543,
+  &#39;id&#39;: 4,
+  &#39;n_runs_subject&#39;: 1,
+  &#39;n_subjects&#39;: 18,
+  &#39;name&#39;: &#39;MerlinMovie&#39;,
+  &#39;summary&#39;: &#39;AV Presentation: Merlin Episode&#39;},
+ {&#39;TR&#39;: 1.5,
+  &#39;avg_run_duration&#39;: 1475,
+  &#39;id&#39;: 45,
+  &#39;n_runs_subject&#39;: 1,
+  &#39;n_subjects&#39;: 18,
+  &#39;name&#39;: &#39;SherlockMovie&#39;,
+  &#39;summary&#39;: &#39;AV Presentation: Sherlock Episode&#39;}]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get any run (first) associated with task &quot;MerlinMovie&quot;, id == &quot;4&quot;</span>
+<span class="n">api</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="mi">4</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;acquisition&#39;: None,
+ &#39;dataset_id&#39;: 5,
+ &#39;duration&#39;: 1543.5,
+ &#39;id&#39;: 1410,
+ &#39;number&#39;: None,
+ &#39;session&#39;: None,
+ &#39;subject&#39;: &#39;25&#39;,
+ &#39;task&#39;: 4,
+ &#39;task_name&#39;: &#39;MerlinMovie&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save the run number an duration for that run</span>
+<span class="n">run_id</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="mi">4</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+<span class="n">run_duration</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">task_id</span><span class="o">=</span><span class="mi">4</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="for-predictors-of-interest-extract-timeseries">
+<h2>2) For predictors of interest, extract timeseries<a class="headerlink" href="#for-predictors-of-interest-extract-timeseries" title="Permalink to this headline">¶</a></h2>
+<p>Here, for the predictors <code class="docutils literal notranslate"><span class="pre">any_faces</span></code>, <code class="docutils literal notranslate"><span class="pre">building</span></code>, and <code class="docutils literal notranslate"><span class="pre">subtlexusfrequency_Lg10WF</span></code>, we will extract predictor events for this specific run (subject: 25, task: ‘MerlinMovie’).</p>
+<p>First, we need to get the <code class="docutils literal notranslate"><span class="pre">predictor_id</span></code> for each predictor of interest associated with that specific run.</p>
+<div class="alert alert-block alert-info">
+<b>Note:</b> In Neuroscout, `predictor_ids` are different for each dataset even for the same named features (e.g. "any_faces"). Within Datasets, they can also differ for each task. For that reason, it's safest to ask for the Predictor ID associated with a specific run, or sets of runs. 
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">api</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;any_faces&#39;</span><span class="p">,</span> <span class="n">run_id</span><span class="o">=</span><span class="n">run_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;dataset_id&#39;: 5,
+  &#39;description&#39;: &#39;Binary indicator of face detection&#39;,
+  &#39;id&#39;: 19921,
+  &#39;max&#39;: 1.0,
+  &#39;mean&#39;: 1.0,
+  &#39;min&#39;: 1.0,
+  &#39;name&#39;: &#39;any_faces&#39;,
+  &#39;num_na&#39;: 0,
+  &#39;private&#39;: False,
+  &#39;source&#39;: &#39;Collection: merlin_facenet_cw_min50_t62&#39;}]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">any_faces_predictor_id</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;any_faces&#39;</span><span class="p">,</span> <span class="n">run_id</span><span class="o">=</span><span class="n">run_id</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can then query <code class="docutils literal notranslate"><span class="pre">predictor_events</span></code> to get all of the recorded events for this predictor, for a given run:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First 3 events for &quot;any_faces&quot; for an example run </span>
+<span class="n">api</span><span class="o">.</span><span class="n">predictor_events</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">predictor_id</span><span class="o">=</span><span class="n">any_faces_predictor_id</span><span class="p">,</span> <span class="n">run_id</span><span class="o">=</span><span class="n">run_id</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;duration&#39;: 1.0,
+  &#39;onset&#39;: 68.5,
+  &#39;predictor_id&#39;: 19921,
+  &#39;run_id&#39;: 1410,
+  &#39;stimulus_id&#39;: None,
+  &#39;value&#39;: &#39;1.0&#39;},
+ {&#39;duration&#39;: 1.0,
+  &#39;onset&#39;: 69.5,
+  &#39;predictor_id&#39;: 19921,
+  &#39;run_id&#39;: 1410,
+  &#39;stimulus_id&#39;: None,
+  &#39;value&#39;: &#39;1.0&#39;},
+ {&#39;duration&#39;: 1.0,
+  &#39;onset&#39;: 70.5,
+  &#39;predictor_id&#39;: 19921,
+  &#39;run_id&#39;: 1410,
+  &#39;stimulus_id&#39;: None,
+  &#39;value&#39;: &#39;1.0&#39;}]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that events are in “sparse” (or 3 column EV) format, with the keys “onset” “duration” and “value”.
+Time points with no value, do not receive an explicit events.</p>
+<p>In order to plot these events together, we need to convert them into fixed timing evenly sampled format:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">feat</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;any_faces&#39;</span><span class="p">,</span><span class="s1">&#39;building&#39;</span><span class="p">,</span><span class="s1">&#39;subtlexusfrequency_Lg10WF&#39;</span><span class="p">]:</span>
+    <span class="n">predictor_id</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">feat</span><span class="p">,</span> <span class="n">run_id</span><span class="o">=</span><span class="n">run_id</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+    <span class="n">an_event</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">predictor_events</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+        <span class="n">predictor_id</span> <span class="o">=</span> <span class="n">predictor_id</span><span class="p">,</span>
+        <span class="n">run_id</span><span class="o">=</span><span class="n">run_id</span><span class="p">,</span>
+        <span class="n">stimulus_timing</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">run_duration</span><span class="o">*</span><span class="mi">100</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">an_event</span><span class="p">:</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s1">&#39;onset&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+
+        <span class="n">stop</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">]</span><span class="o">=</span><span class="n">value</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">2500</span><span class="p">:]</span>
+    <span class="n">all_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-timecourse-in-two-sample-windows">
+<h2>3) Plot timecourse in two sample windows<a class="headerlink" href="#plot-timecourse-in-two-sample-windows" title="Permalink to this headline">¶</a></h2>
+<p>Finally, we use some custom matplotlib code to plot the timecourse of these three predictor in two windows of the the movie.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Figure</span> <span class="pre">1</span></code> was hand customized to create the final figure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_data_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">all_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="c1"># ind1=8000</span>
+<span class="c1"># ind2=9000</span>
+<span class="n">ind1</span><span class="o">=</span><span class="mi">7500</span>
+<span class="n">ind2</span><span class="o">=</span><span class="mi">9000</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">color</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">all_data_y</span><span class="p">[</span><span class="n">ind1</span><span class="p">:</span><span class="n">ind2</span><span class="p">],</span><span class="n">all_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">ind1</span><span class="p">:</span><span class="n">ind2</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">all_data_y</span><span class="p">[</span><span class="n">ind1</span><span class="p">:</span><span class="n">ind2</span><span class="p">],</span><span class="n">all_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">ind1</span><span class="p">:</span><span class="n">ind2</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">frame1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+    <span class="n">frame1</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">frame1</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">frame1</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">ind1</span><span class="o">=</span><span class="mi">128000</span>
+<span class="n">ind2</span><span class="o">=</span><span class="mi">129300</span>
+
+<span class="c1"># ind1=103500</span>
+<span class="c1"># ind2=105000</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">color</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">all_data_y</span><span class="p">[</span><span class="n">ind1</span><span class="p">:</span><span class="n">ind2</span><span class="p">],</span><span class="n">all_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">ind1</span><span class="p">:</span><span class="n">ind2</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">all_data_y</span><span class="p">[</span><span class="n">ind1</span><span class="p">:</span><span class="n">ind2</span><span class="p">],</span><span class="n">all_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">ind1</span><span class="p">:</span><span class="n">ind2</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">frame1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+    <span class="n">frame1</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">frame1</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">frame1</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/0 - figure 1 methods_20_0.png" src="../_images/0 - figure 1 methods_20_0.png" />
+<img alt="../_images/0 - figure 1 methods_20_1.png" src="../_images/0 - figure 1 methods_20_1.png" />
+<img alt="../_images/0 - figure 1 methods_20_2.png" src="../_images/0 - figure 1 methods_20_2.png" />
+<img alt="../_images/0 - figure 1 methods_20_3.png" src="../_images/0 - figure 1 methods_20_3.png" />
+<img alt="../_images/0 - figure 1 methods_20_4.png" src="../_images/0 - figure 1 methods_20_4.png" />
+<img alt="../_images/0 - figure 1 methods_20_5.png" src="../_images/0 - figure 1 methods_20_5.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./analyses"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../single_predictor.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Single predictor models</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="1%20-%20single%20predictor%20models.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Single predictor models</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Neuroscout team<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
