@@ -1,27 +1,17 @@
 format: jb-book
 root: intro
-#format: jb-book
 chapters:
 - file: overview
-- file: models
+- file: single_predictor
   sections:
-  - file: Single_Predictor.ipynb
-  - file: Visualize_Predictors.ipynb
-  - file: Compare AFNI.ipynb
-- file: vision
+  - file: analyses/0 - figure 1 methods.ipynb
+  - file: analyses/1 - single predictor models.ipynb
+  - file: analyses/2 - face features.ipynb
+  - file: analyses/3 - language features.ipynb.ipynb
+- file: meta-analyses
   sections:
-  - file: FaceNet.ipynb
-- file: audition
-  sections:
-  - file: AudioSet - RMS_Speech.ipynb
-  - file: AudioSet - Single.ipynb
-- file: language
-  sections:
-  - file: BertEntropy.ipynb
-  - file: BertSurprisal.ipynb
-  - file: Language Variables.ipynb
-  - file: Lexical Frequency - Incremental.ipynb
-  - file: Lexical Frequency Spoken - Incremental.ipynb
-  - file: Lexical Sensorimotor Norms.ipynb
-- file: data_access
+  - file: meta/1 - single predictor models meta.ipynb
+  - file: meta/2 - face features meta.ipynb 
+  - file: meta/3 - language features meta.ipynb   
+  - file: meta/supplemental ROI variability.ipynb     
 
