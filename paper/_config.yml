@@ -5,9 +5,9 @@
 
 #######################################################################################
 # Book settings
-title                       : "Neuroscout Introduction Paper"  # The title of the book. Will be placed in the left navbar.
+title                       : "Neuroscout: a unified platform for generalizable and reproducible fMRI research"  # The title of the book. Will be placed in the left navbar.
 author                      :  The Neuroscout team  # The author of the book
-copyright                   : "2021"  # Copyright year to be placed in the footer
+copyright                   : "2022"  # Copyright year to be placed in the footer
 logo                        : "figures/neuroscout_logo.png"  # A path to the book logo
 exclude_patterns            : []  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 #bibtex_bibfiles:
@@ -45,7 +45,7 @@ launch_buttons:
 repository:
   url                       : https://github.com/neuroscout/neuroscout-paper  # The URL to your book's repository
   path_to_book              : "paper"  # A path to your book's folder, relative to the repository root.
-  branch                    : master  # Which branch of the repository should be used when creating links
+  branch                    : jupyter_book  # Which branch of the repository should be used when creating links
 
 #######################################################################################
 # Advanced and power-user settings

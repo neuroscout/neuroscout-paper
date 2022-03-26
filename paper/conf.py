@@ -18,8 +18,8 @@ import os
 
 # -- Project information -----------------------------------------------------
 
-project = "Neuroscout"
-copyright = "2021, The Neuroscout Team"
+project = "Neuroscout: a unified platform for generalizable and reproducible fMRI research"
+copyright = "2022, The Neuroscout Team"
 author = "The Neuroscout Team"
 
 master_doc = "index"
@@ -57,7 +57,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
 #
 html_title = ""
 html_theme = "sphinx_book_theme"
-html_logo = "_static/logo.png"
+html_logo = "paper/figures/neuroscout_logo.png"
 html_theme_options = {
     "github_url": "https://github.com/neuroscout/neuroscout-paper",
     "repository_url": "https://github.com/neuroscout/neuroscout-paper",
