@@ -1,13 +1,14 @@
 from nilearn import datasets, surface, plotting
 from nilearn.plotting.surf_plotting import _colorbar_from_array, get_cmap
-from matplotlib import colorbar, colors
 from matplotlib import pyplot as plt
+from pathlib import Path
 import numpy as np
 
 fsaverage = datasets.fetch_surf_fsaverage()
 
 def plot_surfaces(imgs, 
                   img_names, 
+                  figname,
                   select=None, 
                   vmax=10, 
                   threshold=3.29,
@@ -50,18 +51,18 @@ def plot_surfaces(imgs,
             pial = getattr(fsaverage, f'pial_{s}')
             texture = surface.vol_to_surf(sub_imgs[iidx], pial, 
                                           **vol_to_surf_kwargs)
-            plotting.plot_surf_stat_map(mesh,
-                                        texture,
-                                        colorbar=False,
-                                        hemi=s,
-                                        view=v,
-                                        threshold=threshold,
-                                        cmap=cmap,
-                                        bg_map=bg,
-                                        axes=ax[iidx,aix],
-                                        figure=fig,
-                                        vmax=vmax, 
-                                        **surface_kwargs)
+            display = plotting.plot_surf_stat_map(mesh,
+                                                  texture,
+                                                  colorbar=False,
+                                                  hemi=s,
+                                                  view=v,
+                                                  threshold=threshold,
+                                                  cmap=cmap,
+                                                  bg_map=bg,
+                                                  axes=ax[iidx,aix],
+                                                  figure=fig,
+                                                  vmax=vmax, 
+                                                  **surface_kwargs)
         cax = ax[iidx,3].inset_axes([1,.2,.05,.6])
         fig.colorbar(cm, ax=ax[iidx,3], cax=cax)
         ax[iidx, 0].set_title(label=select[iidx], 
@@ -71,5 +72,6 @@ def plot_surfaces(imgs,
                               fontdict={'fontsize': title_fontsize},
                               **title_kwargs)
     plt.tight_layout()
+    display.savefig(str(Path('figures') /f'{figname}.png'))
     plotting.show()
         
