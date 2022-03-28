@@ -25,6 +25,6 @@ meta/3 - language features.ipynb
 **NOTE**
 
 Some of the outputs from Jupyter notebooks cells may not render correctly on Github.
-You can paste their URL on https://nbviewer.org/ to visualize them on browser.
+You can visualize them on our Jupyter book: https://neuroscout.github.io/neuroscout-paper/ (or pasting their url on https://nbviewer.org/).
 
 ---
