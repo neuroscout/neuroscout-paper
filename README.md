@@ -26,7 +26,7 @@ The analyses are organized by Figure in the manuscript. Most analyses requires f
 
 [analyses/3-language_features.ipynb](../master/analyses/3-language_features.ipynb)
 
-[meta/3-language_features.ipynb)](../master/meta/3-language_features.ipynb)
+[meta/3-language_features.ipynb](../master/meta/3-language_features.ipynb)
 
 ---
 **NOTE**
