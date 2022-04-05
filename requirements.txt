@@ -1,9 +1,11 @@
 ghp-import
-jupyter-book
-jupytext
-myst-nb
+jupyter-book==0.12.2
+jupytext==1.11.5
+myst-nb==0.13.2
 pyns==0.4.8
 nilearn==0.8.0
 seaborn
 altair
-nimare==0.0.11
+nimare==0.0.11rc1
+sympy==1.2
+pymare==0.0.2
