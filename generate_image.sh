@@ -18,13 +18,13 @@ generate_docker() {
                              sphinx-book-theme jupyter_contrib_nbextensions nbval duecredit' \
                 create_env='neuroscout_paper' \
                 activate=true \
-             --copy . /home/neuroscout/paper \
+             --copy . /home/neuroscout/info \
              --user=root \
-             --run 'chown -R neuroscout /home/neuroscout/paper' \
+             --run 'chown -R neuroscout /home/neuroscout/info' \
              --run 'rm -rf /opt/conda/pkgs/*' \
              --user=neuroscout \
              --run 'mkdir -p ~/.jupyter && echo c.NotebookApp.ip = \"0.0.0.0\" > ~/.jupyter/jupyter_notebook_config.py' \
-             --workdir /home/neuroscout/paper 
+             --workdir /home/neuroscout/info/paper 
 }
 
 # generate files
