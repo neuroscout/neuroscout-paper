@@ -6,6 +6,6 @@ pyns==0.4.8
 nilearn==0.8.0
 seaborn
 altair
-nimare==0.0.11rc1
+nimare==0.0.11
 sympy==1.2
 pymare==0.0.2
