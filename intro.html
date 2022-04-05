@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Overview" href="overview.html" />
+    <link rel="next" title="Individual dataset/task analyses" href="individual.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -76,11 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="_static/neuroscout_logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Neuroscout: a unified platform for generalizable and reproducible fMRI research</h1>
@@ -99,14 +94,9 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="overview.html">
-   Overview
-  </a>
- </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="single_predictor.html">
-   Single predictor models
+  <a class="reference internal" href="individual.html">
+   Individual dataset/task analyses
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -115,23 +105,23 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="analyses/0%20-%20figure%201%20methods.html">
-     Figure 1: feature extraction methods
+    <a class="reference internal" href="analyses/0-figure_1_methods.html">
+     Feature extraction methods
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="analyses/1%20-%20single%20predictor%20models.html">
+    <a class="reference internal" href="analyses/1-single_predictor_models.html">
      Single predictor models
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="analyses/2%20-%20face%20features.html">
-     FaceNet models
+    <a class="reference internal" href="analyses/2-face_features.html">
+     Face features (FaceNet) models
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="analyses/3%20-%20language%20features.ipynb.html">
-     3 - Language Models
+    <a class="reference internal" href="analyses/3-language_features.html">
+     Language Models
     </a>
    </li>
   </ul>
@@ -147,23 +137,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="meta/1%20-%20single%20predictor%20models%20meta.html">
-     Single-predictor models for key features
+    <a class="reference internal" href="meta/1-single_predictor_models_meta.html">
+     Meta-analysis: Single predictor models
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="meta/2%20-%20face%20features%20meta.html">
-     Face-related features
+    <a class="reference internal" href="meta/2-face_features_meta.html">
+     Meta-analysis: Face features (FaceNet) models
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="meta/3%20-%20language%20features%20meta.html">
-     Incremental lexical effects
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="meta/supplemental%20ROI%20variability.html">
-     1) Building
+    <a class="reference internal" href="meta/3-language_features_meta.html">
+     Meta-analysis:  Language Models
     </a>
    </li>
   </ul>
@@ -266,13 +251,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#feedback-questions">
-   Feedback &amp; Questions
+  <a class="reference internal nav-link" href="#rerunning-analyses-and-recreating-figures">
+   Rerunning analyses and recreating figures
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#thanks-and-acknowledgment">
-   Thanks and Acknowledgment
+  <a class="reference internal nav-link" href="#feedback-questions">
+   Feedback &amp; Questions
   </a>
  </li>
 </ul>
@@ -306,13 +291,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#feedback-questions">
-   Feedback &amp; Questions
+  <a class="reference internal nav-link" href="#rerunning-analyses-and-recreating-figures">
+   Rerunning analyses and recreating figures
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#thanks-and-acknowledgment">
-   Thanks and Acknowledgment
+  <a class="reference internal nav-link" href="#feedback-questions">
+   Feedback &amp; Questions
   </a>
  </li>
 </ul>
@@ -337,19 +322,79 @@ const thebe_selector_output = ".output, .cell_output"
 <a class="reference external" href="https://github.com/neuroscout/neuroscout-paper"><img alt="License" src="https://img.shields.io/github/license/neuroscout/neuroscout-paper" /></a></p>
 <div class="section" id="welcome">
 <h1>Welcome<a class="headerlink" href="#welcome" title="Permalink to this headline">¶</a></h1>
-<p>Within these pages we would like to provide a (interactive) walkthrough of our publication “Neuroscout: a unified platform for generalizable and reproducible fMRI research” (please check the paper and the preprint). This walkthrough will outline the applied analyses steps and methods in more detail, including the used code and where possible results which can be rerun an interactive manner. You can navigate through the respective sections via the TOC on the left side and within sections via the TOC on the right side. The three symbols in the top allow to enable full screen mode, link to the underlying Github repository and allow you to download the walkthrough
-as a pdf or jupyter notebook respectively. Some sections will additionally have a little rocket in that row which will allow you to interactively rerun certain analyses via cloud computing. Additionally, we support public reviews and comments through an <a class="reference external" href="http://hypothes.is">hypothes.is</a> plugin with which you can interact on the right side. All of this awesomeness (talking about the infrastructure and resource) is possible through the dedicated and second to none work of the Jupyter community, specifically, the Executable/Jupyter Book and mybinder project.</p>
+<p>Within these pages we would like to provide a (interactive) walkthrough of our publication “Neuroscout: a unified platform for generalizable and reproducible fMRI research” (please check the <span class="xref myst">paper</span> and the <span class="xref myst">preprint</span>). This walkthrough will present the conducted analyses steps, including the used code, and allow you to rerun them and re-create the figures in an interactive manner. You can navigate through the respective sections via the <code class="docutils literal notranslate"><span class="pre">TOC</span></code> on the left side and within sections via the <code class="docutils literal notranslate"><span class="pre">TOC</span></code> on the right side. The three symbols in the top allow you to enable full screen mode, link to the underlying <a class="reference external" href="https://github.com/neuroscout/neuroscout-paper">Github repository</a> and allow you to download the walkthrough as a <code class="docutils literal notranslate"><span class="pre">pdf</span></code> or <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> respectively. Some sections will additionally have a little <code class="docutils literal notranslate"><span class="pre">rocket</span></code> in that row which will allow you to interactively rerun the analyses via cloud computing, i.e. <a class="reference external" href="https://mybinder.org/">mybinder</a>. Additionally, we support public reviews and comments through an <a class="reference external" href="https://web.hypothes.is/">hypothes.is</a> plugin with which you can interact on the right side. All of this awesomeness (talking about the infrastructure and resource) is possible through the dedicated and second to none work of the <a class="reference external" href="https://jupyter.org/">Jupyter community</a>, specifically, the <a class="reference external" href="https://jupyterbook.org/intro.html">Executable/Jupyter Book</a> and <a class="reference external" href="https://mybinder.org/">mybinder</a> project.</p>
 </div>
 <div class="section" id="the-neuroscout-platform">
-<h1>The Neuroscout platform<a class="headerlink" href="#the-neuroscout-platform" title="Permalink to this headline">¶</a></h1>
+<h1>The <a class="reference external" href="https://neuroscout.org/">Neuroscout platform</a><a class="headerlink" href="#the-neuroscout-platform" title="Permalink to this headline">¶</a></h1>
+<p>Within the above mentioned paper this resource accompanies, the <a class="reference external" href="https://neuroscout.org/">Neuroscout platform</a> is formally introduced, with it’s feasibility and usability being demonstrated via multiple analyses at the <code class="docutils literal notranslate"><span class="pre">individual</span> <span class="pre">dataset</span></code>/<code class="docutils literal notranslate"><span class="pre">task</span></code> and <code class="docutils literal notranslate"><span class="pre">meta-analysis</span></code> level. Specifically, a diverse set of models, including e.g. the processing of low and high-level features in both the auditory and visual domain, was run at the <code class="docutils literal notranslate"><span class="pre">individual</span> <span class="pre">dataset</span></code>/<code class="docutils literal notranslate"><span class="pre">task</span></code> level, followed by a <code class="docutils literal notranslate"><span class="pre">meta-analysis</span></code> across all <code class="docutils literal notranslate"><span class="pre">datasets</span></code> and <code class="docutils literal notranslate"><span class="pre">tasks</span></code>. <code class="docutils literal notranslate"><span class="pre">Code</span></code> related to <code class="docutils literal notranslate"><span class="pre">single</span> <span class="pre">task</span> <span class="pre">models</span></code> is found under <a class="reference external" href="https://neuroscout.github.io/neuroscout-paper/single_predictor.html">Single predictor models</a> (<a class="reference external" href="https://github.com/neuroscout/neuroscout-paper/tree/master/analyses">GitHub link</a>) / while <code class="docutils literal notranslate"><span class="pre">meta-analysis</span> <span class="pre">code</span></code> is found under <a class="reference external" href="https://neuroscout.github.io/neuroscout-paper/meta-analyses.html">Meta-analyes</a> (<a class="reference external" href="https://github.com/neuroscout/neuroscout-paper/tree/master/meta">GitHub link</a>). The <code class="docutils literal notranslate"><span class="pre">Neuroscout</span> <span class="pre">model</span> <span class="pre">IDs</span></code> for each analysis can be found in the <a class="reference external" href="https://github.com/neuroscout/neuroscout-paper">GitHub repository</a> under /<a class="reference external" href="https://github.com/neuroscout/neuroscout-paper/tree/master/analyses/models">analyses/models/</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">analyses</span></code> are organized by <code class="docutils literal notranslate"><span class="pre">Figure</span></code> in the manuscript. Most <code class="docutils literal notranslate"><span class="pre">analyses</span></code> <strong>require</strong> first running <code class="docutils literal notranslate"><span class="pre">single</span> <span class="pre">dataset</span> <span class="pre">results</span></code> and then performing a <code class="docutils literal notranslate"><span class="pre">meta-analysis</span></code> for the final <code class="docutils literal notranslate"><span class="pre">figure</span></code>. You can find the notebooks to re-run the analyses and re-create the <code class="docutils literal notranslate"><span class="pre">figures</span></code> as indicated below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Figure</span> <span class="pre">1</span></code></p>
+<p><a class="reference external" href="https://neuroscout.github.io/neuroscout-paper/analyses/">Individual dataset &amp; task analyses/feature extraction methods</a></p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Figures</span> <span class="pre">3-4</span></code></p>
+<p><a class="reference external" href="https://neuroscout.github.io/neuroscout-paper/analyses/">Individual dataset &amp; task analyses/Single predictor models</a></p>
+<p><a class="reference external" href="https://neuroscout.github.io/neuroscout-paper/meta/">Meta-analyses/Single predictor models</a></p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Figure</span> <span class="pre">5</span></code></p>
+<p><a class="reference external" href="https://neuroscout.github.io/neuroscout-paper/analyses/">Individual dataset &amp; task analyses/Face features (FaceNet) models</a></p>
+<p><a class="reference external" href="https://neuroscout.github.io/neuroscout-paper/meta/">Meta-analyses/Face features (FaceNet) models</a></p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Figure</span> <span class="pre">6</span></code></p>
+<p><a class="reference external" href="https://neuroscout.github.io/neuroscout-paper/analyses/">Individual dataset &amp; task analyses/Language models</a></p>
+<p><a class="reference external" href="https://neuroscout.github.io/neuroscout-paper/meta/">Meta-analyses/Language models</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="rerunning-analyses-and-recreating-figures">
+<h1>Rerunning analyses and recreating figures<a class="headerlink" href="#rerunning-analyses-and-recreating-figures" title="Permalink to this headline">¶</a></h1>
+<p>There are multiple options to make use of the resources provided here. Specifically, this refers to rerunning the <code class="docutils literal notranslate"><span class="pre">analyses</span></code> and recreating the <code class="docutils literal notranslate"><span class="pre">figures</span></code>. Which one to choose heavily depends on your preference and available computational architecture.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Cloud</span> <span class="pre">computing</span></code></p>
+<p>As mentioned above, sections that show the respective analyses have a little <code class="docutils literal notranslate"><span class="pre">rocket</span></code> in the top row which will allow you to interactively rerun the analyses via <code class="docutils literal notranslate"><span class="pre">cloud</span> <span class="pre">computing</span></code>, i.e. <a class="reference external" href="https://mybinder.org/">mybinder</a>. This is potentially the easiest option as you don’t have to install/download anything. However, please note that due to restricted computing resources this option might also be the slowest in terms of rerunning the <code class="docutils literal notranslate"><span class="pre">analyses</span></code>. Instead of running a specific <code class="docutils literal notranslate"><span class="pre">analyses</span></code>, you can also easily get access to all via click the button below:</p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/neuroscout/neuroscout-paper/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+</li>
+</ul>
+</br>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Software</span> <span class="pre">containers</span></code></p>
+<p>If you would like to rerun the <code class="docutils literal notranslate"><span class="pre">analyses</span></code> and recreate the <code class="docutils literal notranslate"><span class="pre">figures</span></code> locally on your end, you can make use of a <code class="docutils literal notranslate"><span class="pre">software</span> <span class="pre">container</span></code> we specifically created for this purpose. Depending on your resources, you can either use it via <code class="docutils literal notranslate"><span class="pre">Docker</span></code>:</p>
+ </br>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">neuroscout</span><span class="o">/</span><span class="n">neuroscout</span><span class="o">-</span><span class="n">paper</span><span class="p">:</span><span class="n">preprint</span>
+</pre></div>
+</div>
+<p>or <code class="docutils literal notranslate"><span class="pre">Singularity</span></code> (works for <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">&gt;=2.5</span></code>):</p>
+ </br>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">singularity</span> <span class="n">build</span> <span class="n">neuroscout</span><span class="o">-</span><span class="n">paper</span><span class="o">-</span><span class="n">preprint</span><span class="o">.</span><span class="n">simg</span> <span class="n">docker</span><span class="p">:</span><span class="o">//</span><span class="n">neuroscout</span><span class="o">/</span><span class="n">neuroscout</span><span class="o">-</span><span class="n">paper</span><span class="p">:</span><span class="n">preprint</span>
+</pre></div>
+</div>
+<p>You can then utilize as them as follows, assuming you’re using <code class="docutils literal notranslate"><span class="pre">Docker</span></code>. At first you need to start the <code class="docutils literal notranslate"><span class="pre">software</span> <span class="pre">container</span></code> via:</p>
+ </br>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8888</span><span class="p">:</span><span class="mi">8888</span> <span class="n">neuroscout</span><span class="o">-</span><span class="n">paper</span>
+</pre></div>
+</div>
+<p>Afterwards you should be running the required <code class="docutils literal notranslate"><span class="pre">computational</span> <span class="pre">environment</span></code> from which you need to start a <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span> <span class="pre">server</span></code> via:</p>
+ </br>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span> <span class="o">--</span><span class="n">port</span><span class="o">=</span><span class="mi">8888</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">browser</span> <span class="o">--</span><span class="n">ip</span><span class="o">=</span><span class="mf">0.0.0.0</span>
+</pre></div>
+</div>
+<p>which should provide you with a link that looks roughly like so (it should look slightly different on your end):</p>
+ </br>
+<p><code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8888/?token=d47d101bcb9d1233471aa4fb21240ff74d520887d4c0e0b6</span></code></p>
+ </br>
+<p>If you click on this <code class="docutils literal notranslate"><span class="pre">link</span></code> (in your <code class="docutils literal notranslate"><span class="pre">shell</span></code>) or copy-paste it to your <code class="docutils literal notranslate"><span class="pre">browser</span></code> (NB: <code class="docutils literal notranslate"><span class="pre">Chrome</span></code> usually works best), you should
+see a <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span> <span class="pre">server</span></code> that allows you to navigate through the provided resources, including the <code class="docutils literal notranslate"><span class="pre">analyses</span></code>. In order to rerun them, you then
+only to click on the <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> the <code class="docutils literal notranslate"><span class="pre">analyses</span></code> you want to rerun to open and subsequently running it.</p>
+ </br>
+<p>(NB: the files that were used to create the <code class="docutils literal notranslate"><span class="pre">computational</span> <span class="pre">environment</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">software</span> <span class="pre">container</span></code>, can be found in the
+<a class="reference external" href="https://github.com/neuroscout/neuroscout-paper">GitHub repository</a> and entail a <span class="xref myst">bash script</span> running <a class="reference external" href="https://www.repronim.org/neurodocker/">neurodocker</a>
+that will write a <span class="xref myst">Dockerfile</span>. The latter can be used to rebuild the <code class="docutils literal notranslate"><span class="pre">software</span> <span class="pre">environment</span></code>.)</p>
+</li>
+</ul>
 </div>
 <div class="section" id="feedback-questions">
 <h1>Feedback &amp; Questions<a class="headerlink" href="#feedback-questions" title="Permalink to this headline">¶</a></h1>
 <p>We would highly appreciate and value every feedback, idea or question you might have. Please don’t hesitate a single second to get in touch with us. We would of course prefer if you would use the public comment function via the <a class="reference external" href="http://hypothes.is">hypothes.is</a> plugin (on the right side), but depending on your inquiry opening an issue in the GitHub repository would also be great.</p>
-</div>
-<div class="section" id="thanks-and-acknowledgment">
-<h1>Thanks and Acknowledgment<a class="headerlink" href="#thanks-and-acknowledgment" title="Permalink to this headline">¶</a></h1>
-<p>We would like to thank the Jupyter community, specifically, the Executable/Jupyter Book and mybinder project for enabling us to create this walkthrough. Furthermore, we are grateful for the entire open neuroscience community and the amazing support and resources it provides. This includes the community driven development of data and processing standards, as well as unbelievable amount of software packages that made this project possible. We would additionally like thank … . Our deepest gratitude also goes to the funding agencies that through their trust and financial support enabled this study. This includes …</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -379,10 +424,10 @@ as a pdf or jupyter notebook respectively. Some sections will additionally have 
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="overview.html" title="next page">
+    <a class='right-next' id="next-link" href="individual.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Overview</p>
+        <p class="prev-next-title">Individual dataset/task analyses</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
