@@ -18,9 +18,9 @@
 ## Welcome
 Welcome! This is an interactive walkthrough of our publication “Neuroscout: a unified platform for generalizable and reproducible fMRI research”. Here you can visualize and re-run the code we used to create analyses and figures. 
 
-In the paper, we validate the platform through some replication meta-analyses, and we showcase some more exploratory  applications that demonstrate how Neuroscout can be used to run larger-scale, more generalizable naturalistic fMRI research.
+In the paper, we validate the [Neuroscout platform](https://neuroscout.org/) by replicating established effects from cognitive neuroscience using automatically extracted features in over 30 naturalistic datasets. We then use `meta-analysis` to synthesize single dataset findings, resulting in most robust and generalize estimates. In addition, we also showcase more exploratory applications in two domains (`face processing` & `natural language perception`) that demonstrate how `Neuroscout` can be used to run more generalizable naturalistic `fMRI` research.
 
-These analyses require specifying and estimating models at the level of individual datasets/tasks, and the outputs of these analyses are used as inputs to meta-analyses. This is reflected by the structure of the GitHub repository and of this book.
+These analyses require specifying and estimating models at the level of `individual datasets/tasks`, and the outputs of these analyses are used as inputs to `meta-analyses`. This is reflected by the structure of the [GitHub repository](https://github.com/neuroscout/neuroscout-paper) and of this book.
 
 ## Re-running the analyses
 The `analyses` follow the structure of figures in the manuscript. Most `analyses` **require** first running `single dataset results` (using `Neuroscout`) and then performing a `meta-analysis` (using `NiMARE`).
@@ -30,7 +30,7 @@ Note that, if you want to re-run meta-analyses, you do not need to re-run the da
 
 - `Cloud computing`
 
-   Notebooks can be re-run on the cloud using [mybinder](https://mybinder.org/) by clicking on the `rocket` icon at the top of the notebook page. This is potentially the easiest option as you don't have to install/download anything. You can also easily access all analyses at:
+   `Notebooks` can be re-run on the cloud using [mybinder](https://mybinder.org/) by clicking on the `rocket` icon at the top of the notebook page. This is potentially the easiest option as you don't have to install/download anything. You can also easily access all analyses at:
 
    [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/neuroscout/neuroscout-paper/HEAD)
 
@@ -38,7 +38,7 @@ Note that, if you want to re-run meta-analyses, you do not need to re-run the da
 
 - `Software containers`   
 
-   If you want to re-run the `analyses` and recreate the `figures` locally, you can use our software containers to recreate a suitable environment. Depending on your resources, you can either use `Docker`:
+   If you want to re-run the `analyses` and recreate the `figures` locally, you can use our `software containers` to recreate a suitable environment. More precisely, you can obtain the corresponding `Docker image` via:
 
    </br>
 
@@ -46,16 +46,7 @@ Note that, if you want to re-run meta-analyses, you do not need to re-run the da
    docker pull neuroscout/neuroscout-paper:preprint
    ```
 
-   or `Singularity` (works for `singularity >=2.5`):
-
-   </br>
-
-   ```
-   singularity build neuroscout-paper-preprint.simg docker://neuroscout/neuroscout-paper:preprint
-   ```
-
-
-   If you use `Docker`, first run:
+   and then start it:
 
    </br>
 
@@ -63,7 +54,7 @@ Note that, if you want to re-run meta-analyses, you do not need to re-run the da
    docker run -it --rm -p 8888:8888 neuroscout-paper
    ```
 
-   Then, start a server via:
+   Subsequently, start a `jupyter notebook server` via:
 
    </br>
 
@@ -81,6 +72,55 @@ Note that, if you want to re-run meta-analyses, you do not need to re-run the da
 
    If you click on this link or copy-paste it in your browser, you should
    see a `jupyter notebook server` that allows you to navigate these resources.
+
+   </br>
+
+- `local python environment`
+
+   Finally, if you want to re-run `analyses` and re-create `figures` locally without `sotware containers`, you can do so via using a `python environment`. For this to work, you initially need to download the repository with the `notebooks` and other necessary files from [GitHub](https://github.com/neuroscout/neuroscout-paper). 
+   
+   It is recommend to create a new `python environment` through e.g. `conda` to avoid installation and dependencies issues. For example:
+
+   </br>
+
+   ```
+   conda create -n neuroscout_analyses python==3.8
+   ```
+   
+   </br>
+
+   which you then can `activate` and after navigating to the downloaded repository, install the required `libraries` via:
+
+   </br>
+
+   ```
+   conda activate neuroscout_analyses
+   cd /path/to/neuroscout-paper
+   pip install -r requirements.txt
+   ```
+
+   </br>
+
+   (NB: you need to run the above code line-by-line and exchange the `/path/to` part above to the `path` you downloaded the `neuroscout-paper` repository to.)
+
+   Subsequently, start a `jupyter notebook server` via:
+
+   </br>
+
+   ```
+   jupyter-notebook
+   ```
+
+   which should provide you with a link that looks roughly like this:
+
+   </br>
+
+   ```http://127.0.0.1:8888/?token=d47d101bcb9d1233471aa4fb21240ff74d520887d4c0e0b6```
+
+   </br>
+
+   If you click on this link or copy-paste it in your browser, you should
+   see a `jupyter notebook server` that allows you to re-run the `analyses` and re-create the `figures` through the dedicated `python environment` created above.
 
    </br>
 

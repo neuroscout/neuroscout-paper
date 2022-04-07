@@ -313,8 +313,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="welcome">
 <h1>Welcome<a class="headerlink" href="#welcome" title="Permalink to this headline">¶</a></h1>
 <p>Welcome! This is an interactive walkthrough of our publication “Neuroscout: a unified platform for generalizable and reproducible fMRI research”. Here you can visualize and re-run the code we used to create analyses and figures.</p>
-<p>In the paper, we validate the platform through some replication meta-analyses, and we showcase some more exploratory  applications that demonstrate how Neuroscout can be used to run larger-scale, more generalizable naturalistic fMRI research.</p>
-<p>These analyses require specifying and estimating models at the level of individual datasets/tasks, and the outputs of these analyses are used as inputs to meta-analyses. This is reflected by the structure of the GitHub repository and of this book.</p>
+<p>In the paper, we validate the <a class="reference external" href="https://neuroscout.org/">Neuroscout platform</a> by replicating established effects from cognitive neuroscience using automatically extracted features in over 30 naturalistic datasets. We then use <code class="docutils literal notranslate"><span class="pre">meta-analysis</span></code> to synthesize single dataset findings, resulting in most robust and generalize estimates. In addition, we also showcase more exploratory applications in two domains (<code class="docutils literal notranslate"><span class="pre">face</span> <span class="pre">processing</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">natural</span> <span class="pre">language</span> <span class="pre">perception</span></code>) that demonstrate how <code class="docutils literal notranslate"><span class="pre">Neuroscout</span></code> can be used to run more generalizable naturalistic <code class="docutils literal notranslate"><span class="pre">fMRI</span></code> research.</p>
+<p>These analyses require specifying and estimating models at the level of <code class="docutils literal notranslate"><span class="pre">individual</span> <span class="pre">datasets/tasks</span></code>, and the outputs of these analyses are used as inputs to <code class="docutils literal notranslate"><span class="pre">meta-analyses</span></code>. This is reflected by the structure of the <a class="reference external" href="https://github.com/neuroscout/neuroscout-paper">GitHub repository</a> and of this book.</p>
 </div>
 <div class="section" id="re-running-the-analyses">
 <h1>Re-running the analyses<a class="headerlink" href="#re-running-the-analyses" title="Permalink to this headline">¶</a></h1>
@@ -323,29 +323,24 @@ You can use this resource to simply visualize the analyses, or to re-run them an
 <p>Note that, if you want to re-run meta-analyses, you do not need to re-run the dataset-level models. All statistical maps are uploaded to <code class="docutils literal notranslate"><span class="pre">NeuroVault</span></code> and can be downloaded using our meta-analysis code. If you wish to recreate and re-estimate dataset-level models, you will have to do so locally.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">Cloud</span> <span class="pre">computing</span></code></p>
-<p>Notebooks can be re-run on the cloud using <a class="reference external" href="https://mybinder.org/">mybinder</a> by clicking on the <code class="docutils literal notranslate"><span class="pre">rocket</span></code> icon at the top of the notebook page. This is potentially the easiest option as you don’t have to install/download anything. You can also easily access all analyses at:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Notebooks</span></code> can be re-run on the cloud using <a class="reference external" href="https://mybinder.org/">mybinder</a> by clicking on the <code class="docutils literal notranslate"><span class="pre">rocket</span></code> icon at the top of the notebook page. This is potentially the easiest option as you don’t have to install/download anything. You can also easily access all analyses at:</p>
 <p><a class="reference external" href="https://mybinder.org/v2/gh/neuroscout/neuroscout-paper/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 </li>
 </ul>
 </br>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">Software</span> <span class="pre">containers</span></code></p>
-<p>If you want to re-run the <code class="docutils literal notranslate"><span class="pre">analyses</span></code> and recreate the <code class="docutils literal notranslate"><span class="pre">figures</span></code> locally, you can use our software containers to recreate a suitable environment. Depending on your resources, you can either use <code class="docutils literal notranslate"><span class="pre">Docker</span></code>:</p>
+<p>If you want to re-run the <code class="docutils literal notranslate"><span class="pre">analyses</span></code> and recreate the <code class="docutils literal notranslate"><span class="pre">figures</span></code> locally, you can use our <code class="docutils literal notranslate"><span class="pre">software</span> <span class="pre">containers</span></code> to recreate a suitable environment. More precisely, you can obtain the corresponding <code class="docutils literal notranslate"><span class="pre">Docker</span> <span class="pre">image</span></code> via:</p>
  </br>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">neuroscout</span><span class="o">/</span><span class="n">neuroscout</span><span class="o">-</span><span class="n">paper</span><span class="p">:</span><span class="n">preprint</span>
 </pre></div>
 </div>
-<p>or <code class="docutils literal notranslate"><span class="pre">Singularity</span></code> (works for <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">&gt;=2.5</span></code>):</p>
- </br>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">singularity</span> <span class="n">build</span> <span class="n">neuroscout</span><span class="o">-</span><span class="n">paper</span><span class="o">-</span><span class="n">preprint</span><span class="o">.</span><span class="n">simg</span> <span class="n">docker</span><span class="p">:</span><span class="o">//</span><span class="n">neuroscout</span><span class="o">/</span><span class="n">neuroscout</span><span class="o">-</span><span class="n">paper</span><span class="p">:</span><span class="n">preprint</span>
-</pre></div>
-</div>
-<p>If you use <code class="docutils literal notranslate"><span class="pre">Docker</span></code>, first run:</p>
+<p>and then start it:</p>
  </br>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8888</span><span class="p">:</span><span class="mi">8888</span> <span class="n">neuroscout</span><span class="o">-</span><span class="n">paper</span>
 </pre></div>
 </div>
-<p>Then, start a server via:</p>
+<p>Subsequently, start a <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span> <span class="pre">server</span></code> via:</p>
  </br>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span> <span class="o">--</span><span class="n">port</span><span class="o">=</span><span class="mi">8888</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">browser</span> <span class="o">--</span><span class="n">ip</span><span class="o">=</span><span class="mf">0.0.0.0</span>
 </pre></div>
@@ -356,6 +351,36 @@ You can use this resource to simply visualize the analyses, or to re-run them an
  </br>
 <p>If you click on this link or copy-paste it in your browser, you should
 see a <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span> <span class="pre">server</span></code> that allows you to navigate these resources.</p>
+ </br>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">python</span> <span class="pre">environment</span></code></p>
+<p>Finally, if you want to re-run <code class="docutils literal notranslate"><span class="pre">analyses</span></code> and re-create <code class="docutils literal notranslate"><span class="pre">figures</span></code> locally without <code class="docutils literal notranslate"><span class="pre">sotware</span> <span class="pre">containers</span></code>, you can do so via using a <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">environment</span></code>. For this to work, you initially need to download the repository with the <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> and other necessary files from <a class="reference external" href="https://github.com/neuroscout/neuroscout-paper">GitHub</a>.</p>
+<p>It is recommend to create a new <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">environment</span></code> through e.g. <code class="docutils literal notranslate"><span class="pre">conda</span></code> to avoid installation and dependencies issues. For example:</p>
+ </br>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">neuroscout_analyses</span> <span class="n">python</span><span class="o">==</span><span class="mf">3.8</span>
+</pre></div>
+</div>
+ </br>
+<p>which you then can <code class="docutils literal notranslate"><span class="pre">activate</span></code> and after navigating to the downloaded repository, install the required <code class="docutils literal notranslate"><span class="pre">libraries</span></code> via:</p>
+ </br>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">neuroscout_analyses</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">neuroscout</span><span class="o">-</span><span class="n">paper</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+ </br>
+<p>(NB: you need to run the above code line-by-line and exchange the <code class="docutils literal notranslate"><span class="pre">/path/to</span></code> part above to the <code class="docutils literal notranslate"><span class="pre">path</span></code> you downloaded the <code class="docutils literal notranslate"><span class="pre">neuroscout-paper</span></code> repository to.)</p>
+<p>Subsequently, start a <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span> <span class="pre">server</span></code> via:</p>
+ </br>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span>
+</pre></div>
+</div>
+<p>which should provide you with a link that looks roughly like this:</p>
+ </br>
+<p><code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8888/?token=d47d101bcb9d1233471aa4fb21240ff74d520887d4c0e0b6</span></code></p>
+ </br>
+<p>If you click on this link or copy-paste it in your browser, you should
+see a <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span> <span class="pre">server</span></code> that allows you to re-run the <code class="docutils literal notranslate"><span class="pre">analyses</span></code> and re-create the <code class="docutils literal notranslate"><span class="pre">figures</span></code> through the dedicated <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">environment</span></code> created above.</p>
  </br>
 </li>
 </ul>
