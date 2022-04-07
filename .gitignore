@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Local Jupyter Book builds
-paper/_build
+book/_build
