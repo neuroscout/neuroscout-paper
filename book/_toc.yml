@@ -1,0 +1,14 @@
+format: jb-book
+root: intro
+chapters:
+- file: individual
+  sections:
+  - file: analyses/0-figure_1_methods.ipynb
+  - file: analyses/1-single_predictor_models.ipynb
+  - file: analyses/2-face_features.ipynb
+  - file: analyses/3-language_features.ipynb
+- file: meta-analyses
+  sections:
+  - file: meta/1-single_predictor_models_meta.ipynb
+  - file: meta/2-face_features_meta.ipynb 
+  - file: meta/3-language_features_meta.ipynb   
