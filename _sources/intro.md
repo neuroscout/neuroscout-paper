@@ -22,15 +22,15 @@ In the paper, we validate the platform through some replication meta-analyses, a
 
 These analyses require specifying and estimating models at the level of individual datasets/tasks, and the outputs of these analyses are used as inputs to meta-analyses. This is reflected by the structure of the GitHub repository and of this book.
 
-## Rerunning the analyses
-The `analyses` follow the structure of figures in the manuscript. Most `analyses` **require** first running `single dataset results` and then performing a `meta-analysis`.
-You can use this resource to simply visualize the analyses, or to rerun them and recreate the figure.
+## Re-running the analyses
+The `analyses` follow the structure of figures in the manuscript. Most `analyses` **require** first running `single dataset results` (using `Neuroscout`) and then performing a `meta-analysis` (using `NiMARE`).
+You can use this resource to simply visualize the analyses, or to re-run them and recreate the figure.
 
-Note that, if you want to rerun meta-analyses, you do not need to rerun the dataset-level models. All statistical maps are uploaded to `NeuroVault` and can be downloaded using our meta-analysis code. If you wish to recreate and re-estimate dataset-level models, you will have to do so locally.
+Note that, if you want to re-run meta-analyses, you do not need to re-run the dataset-level models. All statistical maps are uploaded to `NeuroVault` and can be downloaded using our meta-analysis code. If you wish to recreate and re-estimate dataset-level models, you will have to do so locally.
 
 - `Cloud computing`
 
-   Notebooks can be rerun on the cloud using [mybinder](https://mybinder.org/) by clicking on the `rocket` icon at the top of the notebook page. This is potentially the easiest option as you don't have to install/download anything. You can also easily access all analyses at:
+   Notebooks can be re-run on the cloud using [mybinder](https://mybinder.org/) by clicking on the `rocket` icon at the top of the notebook page. This is potentially the easiest option as you don't have to install/download anything. You can also easily access all analyses at:
 
    [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/neuroscout/neuroscout-paper/HEAD)
 
@@ -38,7 +38,7 @@ Note that, if you want to rerun meta-analyses, you do not need to rerun the data
 
 - `Software containers`   
 
-   If you want to rerun the `analyses` and recreate the `figures` locally, you can use our software containers to recreate a suitable environment. Depending on your resources, you can either use `Docker`:
+   If you want to re-run the `analyses` and recreate the `figures` locally, you can use our software containers to recreate a suitable environment. Depending on your resources, you can either use `Docker`:
 
    </br>
 

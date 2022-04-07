@@ -246,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rerunning-the-analyses">
-   Rerunning the analyses
+  <a class="reference internal nav-link" href="#re-running-the-analyses">
+   Re-running the analyses
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -281,8 +281,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rerunning-the-analyses">
-   Rerunning the analyses
+  <a class="reference internal nav-link" href="#re-running-the-analyses">
+   Re-running the analyses
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -316,21 +316,21 @@ const thebe_selector_output = ".output, .cell_output"
 <p>In the paper, we validate the platform through some replication meta-analyses, and we showcase some more exploratory  applications that demonstrate how Neuroscout can be used to run larger-scale, more generalizable naturalistic fMRI research.</p>
 <p>These analyses require specifying and estimating models at the level of individual datasets/tasks, and the outputs of these analyses are used as inputs to meta-analyses. This is reflected by the structure of the GitHub repository and of this book.</p>
 </div>
-<div class="section" id="rerunning-the-analyses">
-<h1>Rerunning the analyses<a class="headerlink" href="#rerunning-the-analyses" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">analyses</span></code> follow the structure of figures in the manuscript. Most <code class="docutils literal notranslate"><span class="pre">analyses</span></code> <strong>require</strong> first running <code class="docutils literal notranslate"><span class="pre">single</span> <span class="pre">dataset</span> <span class="pre">results</span></code> and then performing a <code class="docutils literal notranslate"><span class="pre">meta-analysis</span></code>.
-You can use this resource to simply visualize the analyses, or to rerun them and recreate the figure.</p>
-<p>Note that, if you want to rerun meta-analyses, you do not need to rerun the dataset-level models. All statistical maps are uploaded to <code class="docutils literal notranslate"><span class="pre">NeuroVault</span></code> and can be downloaded using our meta-analysis code. If you wish to recreate and re-estimate dataset-level models, you will have to do so locally.</p>
+<div class="section" id="re-running-the-analyses">
+<h1>Re-running the analyses<a class="headerlink" href="#re-running-the-analyses" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">analyses</span></code> follow the structure of figures in the manuscript. Most <code class="docutils literal notranslate"><span class="pre">analyses</span></code> <strong>require</strong> first running <code class="docutils literal notranslate"><span class="pre">single</span> <span class="pre">dataset</span> <span class="pre">results</span></code> (using <code class="docutils literal notranslate"><span class="pre">Neuroscout</span></code>) and then performing a <code class="docutils literal notranslate"><span class="pre">meta-analysis</span></code> (using <code class="docutils literal notranslate"><span class="pre">NiMARE</span></code>).
+You can use this resource to simply visualize the analyses, or to re-run them and recreate the figure.</p>
+<p>Note that, if you want to re-run meta-analyses, you do not need to re-run the dataset-level models. All statistical maps are uploaded to <code class="docutils literal notranslate"><span class="pre">NeuroVault</span></code> and can be downloaded using our meta-analysis code. If you wish to recreate and re-estimate dataset-level models, you will have to do so locally.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">Cloud</span> <span class="pre">computing</span></code></p>
-<p>Notebooks can be rerun on the cloud using <a class="reference external" href="https://mybinder.org/">mybinder</a> by clicking on the <code class="docutils literal notranslate"><span class="pre">rocket</span></code> icon at the top of the notebook page. This is potentially the easiest option as you don’t have to install/download anything. You can also easily access all analyses at:</p>
+<p>Notebooks can be re-run on the cloud using <a class="reference external" href="https://mybinder.org/">mybinder</a> by clicking on the <code class="docutils literal notranslate"><span class="pre">rocket</span></code> icon at the top of the notebook page. This is potentially the easiest option as you don’t have to install/download anything. You can also easily access all analyses at:</p>
 <p><a class="reference external" href="https://mybinder.org/v2/gh/neuroscout/neuroscout-paper/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 </li>
 </ul>
 </br>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">Software</span> <span class="pre">containers</span></code></p>
-<p>If you want to rerun the <code class="docutils literal notranslate"><span class="pre">analyses</span></code> and recreate the <code class="docutils literal notranslate"><span class="pre">figures</span></code> locally, you can use our software containers to recreate a suitable environment. Depending on your resources, you can either use <code class="docutils literal notranslate"><span class="pre">Docker</span></code>:</p>
+<p>If you want to re-run the <code class="docutils literal notranslate"><span class="pre">analyses</span></code> and recreate the <code class="docutils literal notranslate"><span class="pre">figures</span></code> locally, you can use our software containers to recreate a suitable environment. Depending on your resources, you can either use <code class="docutils literal notranslate"><span class="pre">Docker</span></code>:</p>
  </br>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">neuroscout</span><span class="o">/</span><span class="n">neuroscout</span><span class="o">-</span><span class="n">paper</span><span class="p">:</span><span class="n">preprint</span>
 </pre></div>
