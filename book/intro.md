@@ -1,5 +1,5 @@
 <center>
-<img src="https://neuroscout.org/static/Neuroscout_Simple_Wide.svg" alt="neuroscout logo" width="600" style="margin:0 0 0 0"/>
+<img src="https://neuroscout.org/static/neuroscout_simpler_dark_blue_medium.svg" alt="neuroscout logo" width="600" style="margin:0 0 0 0"/>
 </center>
 
 </br>
