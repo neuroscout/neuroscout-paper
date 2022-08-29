@@ -18,7 +18,7 @@
 ## Welcome
 Welcome! This is an interactive walkthrough of our publication “Neuroscout: a unified platform for generalizable and reproducible fMRI research”. Here you can visualize and re-run the code we used to create analyses and figures. 
 
-In the paper, we validate the [Neuroscout platform](https://neuroscout.org/) by replicating established effects from cognitive neuroscience using automatically extracted features in over 30 naturalistic datasets. We then use `meta-analysis` to synthesize single dataset findings, resulting in most robust and generalize estimates. In addition, we also showcase more exploratory applications in two domains (`face processing` & `natural language perception`) that demonstrate how `Neuroscout` can be used to run more generalizable naturalistic `fMRI` research.
+In the paper, we validate the [Neuroscout platform](https://neuroscout.org/) by replicating established effects from cognitive neuroscience using automatically extracted features in over 30 naturalistic datasets. We then use `meta-analysis` to synthesize single dataset findings, resulting in more robust and generalize estimates. In addition, we also showcase more exploratory applications in two domains (`face processing` & `natural language perception`) that demonstrate how `Neuroscout` can be used to run more generalizable naturalistic `fMRI` research.
 
 These analyses require specifying and estimating models at the level of `individual datasets/tasks`, and the outputs of these analyses are used as inputs to `meta-analyses`. This is reflected by the structure of the [GitHub repository](https://github.com/neuroscout/neuroscout-paper) and of this book.
 
